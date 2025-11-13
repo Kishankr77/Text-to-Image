@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Text-to-Image Generator | ArtForge</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    
+    <header class="app-header">
+        <i class="fas fa-magic logo-icon"></i>
+        <h2>AI Image Generator</h2>
+        <p class="tagline">Turn imagination into digital art instantly.</p>
+    </header>
+
+    <section class="generator-area">
+        
+        <div class="prompt-input-group">
+            <input type="text" id="prompt" placeholder="Enter a detailed and creative prompt (e.g., A cyberpunk cityscape under neon rain)">
+            <button id="generateBtn"><i class="fas fa-wand-magic-sparkles"></i> Generate</button>
+        </div>
+
+        <div class="options-group">
+            <div class="select-wrapper">
+                <label for="style-select"><i class="fas fa-palette"></i> Style:</label>
+                <select id="style-select">
+                    <option value="">-- Choose Style --</option>
+                    <option value="cinematic photography, high detail, masterpiece">Photography</option>
+                    <option value="oil painting, textured canvas, detailed brushwork">Oil Painting</option>
+                    <option value="anime art, vibrant colors, stylized">Anime</option>
+                    <option value="digital art, highly rendered, fantasy">Digital Art</option>
+                    <option value="watercolor painting, soft colors, delicate strokes">Watercolor</option>
+                </select>
+            </div>
+
+            <div class="select-wrapper">
+                <label for="ratio-select"><i class="fas fa-expand-alt"></i> Aspect Ratio:</label>
+                <select id="ratio-select">
+                    <option value="1:1">1:1 (Square)</option>
+                    <option value="16:9">16:9 (Landscape)</option>
+                    <option value="9:16">9:16 (Portrait)</option>
+                    <option value="4:3">4:3 (Traditional)</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="image-container">
+            <div id="loader" class="loader"></div>
+            <img id="output" style="display:none;" alt="Generated AI Image" />
+            <div id="placeholderText" class="placeholder-text">
+              Type your prompt above, select options, and hit Generate!
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <a id="downloadBtn" style="display:none;" class="download-link" href="#" download="ArtForge_AI_Image.png">
+                <i class="fas fa-download"></i> Download Image
+            </a>
+        </div>
+        
+    </section>
+
+    <section class="tips-section">
+      <h3>Generation Tips <i class="fas fa-lightbulb"></i></h3>
+      <ul>
+        <li><i class="fas fa-check-circle"></i> Use descriptive words (color, emotion, environment).</li>
+        <li><i class="fas fa-check-circle"></i> Specify styles: 'oil painting', 'photography', 'anime'.</li>
+        <li><i class="fas fa-check-circle"></i> Avoid vague prompts for better results.</li>
+      </ul>
+    </section>
+    
+    <footer class="app-footer">
+        <p>&copy; 2025 Team Multinier Project. Powered by Stable Diffusion.</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
